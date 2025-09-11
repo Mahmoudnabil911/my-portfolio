@@ -171,14 +171,14 @@ export default function Portfolio() {
       category: "Animation Library",
       experience: "1+ years",
     },
-    {
-      name: "RxJS",
-      level: 75,
-      color: "text-purple-500",
-      icon: "🔄",
-      category: "Reactive Programming",
-      experience: "1+ years",
-    },
+    // {
+    //   name: "RxJS",
+    //   level: 75,
+    //   color: "text-purple-500",
+    //   icon: "🔄",
+    //   category: "Reactive Programming",
+    //   experience: "1+ years",
+    // },
     {
       name: "SCSS",
       level: 85,
@@ -720,9 +720,7 @@ export default function Portfolio() {
                       <Badge variant="secondary" className="glass hover-lift">
                         SCSS
                       </Badge>
-                      <Badge variant="secondary" className="glass hover-lift">
-                        RxJS
-                      </Badge>
+                    
                       <Badge variant="secondary" className="glass hover-lift">
                         Team Leadership
                       </Badge>
@@ -1238,7 +1236,6 @@ export default function Portfolio() {
                   <div className="relative">
                     <Input
                       className="glass peer pt-6 pb-2 px-4 placeholder-transparent"
-                      placeholder="Your name"
                       value={formData.name}
                       onChange={(e) =>
                         handleInputChange("name", e.target.value)
@@ -1261,7 +1258,6 @@ export default function Portfolio() {
                     <Input
                       className="glass peer pt-6 pb-2 px-4 placeholder-transparent"
                       type="email"
-                      placeholder="your.email@example.com"
                       value={formData.email}
                       onChange={(e) =>
                         handleInputChange("email", e.target.value)
@@ -1292,7 +1288,7 @@ export default function Portfolio() {
                     onFocus={() => setFocusedField("message")}
                     onBlur={() => setFocusedField(null)}
                   />
-                  <label
+                  {/* <label
                     className={`absolute left-4 transition-all duration-300 pointer-events-none ${
                       formData.message || focusedField === "message"
                         ? "top-2 text-xs text-primary"
@@ -1300,7 +1296,7 @@ export default function Portfolio() {
                     }`}
                   >
                     Project Details
-                  </label>
+                  </label> */}
                 </div>
 
                 <Button
